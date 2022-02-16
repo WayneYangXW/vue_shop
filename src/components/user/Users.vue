@@ -345,9 +345,9 @@ export default {
         if (res.meta.status !== 200) {
           return this.$message.error("更新用户信息失败!");
         }
-        this.editDialogVisible = false;
         this.getUsersList();
         this.$message.success("更新用户信息成功!");
+        this.editDialogVisible = false;
       });
     },
     async removeUserById(id) {
