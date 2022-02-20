@@ -111,9 +111,13 @@ export default {
     },
     handleSizeChange(val) {
       console.log(`每页 ${val} 条`);
+      this.queryInfo.pagesize = val
+      this.getGoodsList()
     },
     handleCurrentChange(val) {
       console.log(`当前页: ${val}`);
+      this.queryInfo.pagenum = val
+      this.getGoodsList()
     },
     goAddGoodPage() {
         this.$router.push('/goods/add')
